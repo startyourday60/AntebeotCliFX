@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane fx:id="mainPane" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="ru.antebeotcli.antebeotcli_.AuthControler">
+  <children>
+    <TextArea id="loginArea" fx:id="LoginArea" layoutX="306.0" layoutY="57.0" prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: black;" />
+    <TextArea id="passArea" fx:id="PasswordArea" layoutX="306.0" layoutY="105.0" prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: black;" />
+    <TextArea id="captchaArea" fx:id="CaptchaArea" layoutX="386.0" layoutY="287.0" prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: black;" />
+    <Text id="loginLabel" fontSmoothingType="LCD" layoutX="106.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ЛОГИН" textAlignment="CENTER" wrappingWidth="124.13671875" fx:id="loginLabel">
+      <font>
+        <Font name="Segoe UI Emoji" size="23.0" />
+      </font>
+      <fill>
+        <RadialGradient centerX="0.5" centerY="1.0" radius="0.5">
+          <stops>
+            <Stop>
+              <color>
+                <Color />
+              </color>
+            </Stop>
+            <Stop offset="1.0">
+              <color>
+                <Color red="0.3333333432674408" green="1.0" />
+              </color>
+            </Stop>
+          </stops>
+        </RadialGradient>
+      </fill>
+    </Text>
+    <Text fx:id="captchaLabel" fontSmoothingType="LCD" layoutX="244.0" layoutY="314.0" strokeType="OUTSIDE" strokeWidth="0.0" text="КАПTЧА" textAlignment="CENTER" wrappingWidth="124.13671875">
+      <font>
+        <Font name="Segoe UI Emoji" size="23.0" />
+      </font>
+      <fill>
+        <RadialGradient centerX="0.5" centerY="1.0" radius="0.5">
+          <stops>
+            <Stop>
+              <color>
+                <Color />
+              </color>
+            </Stop>
+            <Stop offset="1.0">
+              <color>
+                <Color red="0.3333333432674408" green="1.0" />
+              </color>
+            </Stop>
+          </stops>
+        </RadialGradient>
+      </fill>
+    </Text>
+
+    <Text fx:id="PassLabel" fontSmoothingType="LCD" layoutX="116.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ПАРОЛЬ" textAlignment="CENTER" wrappingWidth="124.13671875">
+      <font>
+        <Font name="Segoe UI Emoji" size="23.0" />
+      </font>
+      <fill>
+        <RadialGradient centerX="0.5" centerY="1.0" radius="0.5">
+          <stops>
+            <Stop>
+              <color>
+                <Color />
+              </color>
+            </Stop>
+            <Stop offset="1.0">
+              <color>
+                <Color red="0.3333333432674408" green="1.0" />
+              </color>
+            </Stop>
+          </stops>
+        </RadialGradient>
+      </fill>
+    </Text>
+    <Accordion layoutX="144.0" layoutY="274.0" />
+    <Button id="reloadCaptchaButton" layoutX="399.0" layoutY="325.0" onAction="#reloadCaptcha" prefHeight="25.0" prefWidth="174.0" text="ПЕРЕЗАГРУЗИТЬ КАПТЧУ" />
+    <ImageView id="CaptchaView" fx:id="ImageCaptcha" fitHeight="195.0" fitWidth="233.0" layoutY="209.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@BlankCaptcha.png" />
+      </image>
+    </ImageView>
+    <Button id="regButton" fx:id="RegButton" layoutX="479.0" layoutY="357.0" mnemonicParsing="false" onAction="#onRegButtonClick" text="ЗАРЕГАТЬСЯ" />
+    <Button id="enterButton" fx:id="EnterButton" layoutX="399.0" layoutY="357.0" mnemonicParsing="false" onAction="#onEnterButtonClick" prefHeight="25.0" prefWidth="69.0" text="ВОЙТИ" />
+    <Text layoutX="178.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="АВТОРИЗАЦИЯ" fx:id="TopText">
+      <font>
+        <Font size="33.0" />
+      </font>
+      <fill>
+        <RadialGradient centerX="0.5497237569060773" centerY="0.5" radius="0.5">
+          <stops>
+            <Stop>
+              <color>
+                <Color />
+              </color>
+            </Stop>
+            <Stop offset="1.0">
+              <color>
+                <Color red="0.7236841917037964" green="0.10386208444833755" blue="0.10386208444833755" />
+              </color>
+            </Stop>
+          </stops>
+        </RadialGradient>
+      </fill>
+    </Text>
+      <TextArea id="_2faArea" fx:id="_2faArea" layoutX="306.0" layoutY="158.0" prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: black;" />
+      <Text id="_2faLabel" fx:id="_2faLabel" fontSmoothingType="LCD" layoutX="102.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2fa(если имеется)" textAlignment="CENTER" wrappingWidth="186.13671875">
+         <font>
+            <Font name="Segoe UI Emoji" size="23.0" />
+         </font>
+         <fill>
+            <RadialGradient centerX="0.5" centerY="1.0" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.3333333432674408" green="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </fill>
+      </Text>
+  </children>
+</Pane>
